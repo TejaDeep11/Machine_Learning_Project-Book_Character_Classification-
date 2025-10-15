@@ -1,0 +1,147 @@
+/* --- GENERAL STYLING --- */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+body {
+    background-color: #0E1117;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hide Streamlit's default header and footer */
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+.stButton>button {
+    border-radius: 8px;
+    border: 1px solid #2a628f;
+    transition: all 0.3s ease-in-out;
+    background-color: #1c4966;
+    color: white;
+    font-weight: 500;
+}
+
+.stButton>button:hover {
+    background-color: #2a628f;
+    border-color: #3b88c3;
+    box-shadow: 0 0 15px rgba(59, 136, 195, 0.5);
+}
+
+.stButton>button:focus {
+    box-shadow: 0 0 0 2px #3b88c3 !important;
+}
+
+/* Main App Title */
+.main-title-app {
+    font-family: 'Merriweather', serif;
+    color: #FFFFFF;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Step Headers */
+.step-header {
+    font-family: 'Merriweather', serif;
+    color: #3b88c3;
+    border-bottom: 2px solid #2a628f;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* --- WELCOME PAGE --- */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.main-title {
+    font-family: 'Merriweather', serif;
+    font-size: 3em;
+    color: #FFFFFF;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #b0b8c4;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* --- VERDICT DISPLAY --- */
+.verdict {
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.verdict.good {
+    background: linear-gradient(135deg, #10b981, #14b8a6);
+    color: white;
+    border: 2px solid #059669;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+.verdict.bad {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    border: 2px solid #b91c1c;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+}
+
+/* --- VOTE BREAKDOWN --- */
+.vote-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #161a21;
+    margin-bottom: 8px;
+    border-left: 5px solid #2a628f;
+    transition: transform 0.2s ease;
+}
+
+.vote-card:hover {
+    transform: translateX(5px);
+}
+
+.model-name {
+    font-weight: bold;
+    color: #d1d5db;
+    flex: 2;
+}
+
+.vote-cast {
+    font-weight: 500;
+    color: #e5e7eb;
+    flex: 1;
+    text-align: center;
+}
+
+.model-accuracy {
+    font-family: monospace;
+    color: #9ca3af;
+    flex: 1;
+    text-align: right;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
