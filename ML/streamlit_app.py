@@ -86,7 +86,7 @@ models_and_vectorizers = load_models()
 
 
 # IMPORTANT: PASTE YOUR GEMINI API KEY HERE
-GEMINI_API_KEY = "AIzaSyBk3t9SeoyXe0G1znH27aYXybk02ccsdH8"
+GEMINI_API_KEY = "place the gemini key here"
 
 # --- STATE MANAGEMENT ---
 if 'page' not in st.session_state:
@@ -313,4 +313,5 @@ elif st.session_state.page == "welcome":
     page_welcome()
 else:
     page_main_app()
+
 
